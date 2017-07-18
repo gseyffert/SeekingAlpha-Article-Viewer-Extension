@@ -6,10 +6,21 @@
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://seekingalpha.com/*",
+        "https://seekingalpha.com/*"
+      ],
+      "js": [ "popup.js" ]
+    }
+  ],
   "permissions": [
-    "activeTab"
+    "tabs",
+    "activeTab",
+    "http://seekingalpha.com/*",
+    "https://seekingalpha.com/*"
   ]
 }
