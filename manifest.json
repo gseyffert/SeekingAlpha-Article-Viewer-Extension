@@ -1,20 +1,17 @@
 {
   "manifest_version": 2,
 
-  "name": "Seeking Alpha Login-wall Remover",
-  "description": "This extension removes Seeking Alpha's login wall.",
+  "name": "Seeking Alpha Article Revealer",
+  "description": "This extension reveals whole articles for non logged-in users on seekingalpha.com.",
   "version": "1.0",
 
-  "browser_action": {
-    "default_popup": "popup.html"
-  },
   "content_scripts": [
     {
       "matches": [
         "http://seekingalpha.com/*",
         "https://seekingalpha.com/*"
       ],
-      "js": [ "popup.js" ]
+      "js": [ "reveal.js" ]
     }
   ],
   "permissions": [
